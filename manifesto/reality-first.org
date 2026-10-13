@@ -1,0 +1,1276 @@
+#+TITLE: Reality First
+#+SUBTITLE: Digital traces, automation, and an orthopraxy of judgment: a manifesto
+#+AUTHOR: Dimitri Diomaiuta
+#+LICENSE: CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/); the full text is the LICENSE file beside this one
+#+STARTUP: showall
+
+* Preamble
+
+This is the manifesto of a working practice. It describes how to organize
+any work that /accumulates against a reality and must be answered for/ —
+a research program, a long engineering effort, a commissioned delivery,
+a professional life — around two things: the *digital traces* the work
+leaves behind, and the *automation* (today, language models) that can
+absorb almost every cost of keeping those traces honest.
+
+The practice in one paragraph:
+
+#+begin_quote
+Organize the work as a self-correcting loop. Action makes contact with
+reality and leaves traces. Traces are the most authoritative account of
+what happened; every representation built on them — map, roadmap, plan,
+summary — is re-derived from the traces and disposable, and where
+representation and traces disagree, the traces win. A machine does all
+the friction around the loop: recording, distilling, surfacing,
+narrating, scaffolding — because that friction is what historically
+kills the practice. Exactly one node is never delegated: the situated
+human judgment that turns surfaced reality into a committed choice and
+signs for it. The representation's prescriptiveness is a dial, set by
+how bounded the work is.
+#+end_quote
+
+Everything that follows introduces the concepts in that paragraph,
+grounds them, names where they are fragile, and states what would prove
+them wrong. The practice was not designed top-down; it was extracted
+from several working systems — a personal memory log kept across years,
+a data-science methodology, a compiler project, a bounded delivery
+against a brief agreed in writing with its recipient — that converged
+on the same design decisions independently. The manifesto distils
+that convergence, with its corrections applied rather than hidden.
+
+* The problem
+
+Three failures motivate the practice. Each is old; the third is new.
+
+** The articulation tax
+
+Faithful records of work die from friction, not from lack of conviction.
+The lab notebook decays into "we tried some stuff, it didn't work." The
+engineering log goes stale the week a deadline lands. The journal stops
+the day it becomes a chore. The cost of /articulating/ what happened —
+writing it down, keeping it organized, keeping it findable — competes
+with the work itself, and the work wins. The valuable practice is not
+done badly; it stops being done at all.
+
+** Map drift
+
+Every standing representation of work — the project plan, the backlog,
+the architecture document, the mental model — begins as a faithful
+account and then quietly stops being one. Reality moves; the map is
+groomed instead of re-derived; eventually the map is defended /against/
+reality. A plan that has drifted is worse than no plan, because it
+still carries authority. Whole traditions of failure live here: the
+master plan that flattens what it cannot see, the metric that replaces
+the goal it was meant to measure, the backlog item nobody can trace to
+an actual requirement.
+
+** The new temptation: wholesale delegation
+
+Language models changed the economics of both failures at once. They
+can absorb the articulation tax almost entirely — and they can also,
+for the first time, plausibly absorb the /judgment/. The same machine
+that will happily maintain your log will happily write your
+reflections, propose your hypotheses, and make your decisions, fluently
+enough that the difference is invisible on the page. So the old
+question — "how do we keep records honest?" — acquires a new, sharper
+companion: /what, exactly, must not be delegated, and why?/
+
+The reality-first practice is one answer to both questions together.
+
+* The two principles
+
+The practice rests on two principles. They are independent — neither
+can be derived from the other — and the practice is their
+/conjunction/. Getting their relationship right matters, because each
+alone collapses into something that already exists and does not need a
+manifesto.
+
+** Principle I — the architecture: representations are answerable to traces
+
+Picture someone charting an unknown coast from a small boat.
+
+The explorer's golden rule: /the chart is always redrawn from the
+coastline — never the coastline "corrected" to match the chart./ If the
+map says "bay here" and you sail up to solid cliff, you do not argue
+with the cliff; you cross out the bay and draw the cliff. The sea is
+the truth; the chart is disposable notes about it. A captain who trusts
+his beautiful old chart over the rocks in front of him drowns.
+
+Stated precisely, the principle is an *authority ordering among
+representations*. Pure "reality" is never directly in hand — what is in
+hand are /traces/: the commit, the test result, the signed contract,
+the measurement. Traces are themselves representations — selected,
+encoded residues, not the territory. But they are the /least-derived/
+account of reality available, and the principle is that authority flows
+strictly down the derivation chain:
+
+#+begin_quote
+reality → traces → derived representations (maps, plans, summaries)
+
+Each layer is answerable to the one above it, and is re-derived from
+it, never the reverse. Where layers disagree, the less-derived layer
+wins.
+#+end_quote
+
+This is how the sciences already handle theory-laden data — data
+outranks theory even though data is never raw — and it is honest in a
+way the slogan "reality wins" is not. The trace is not the territory
+either; it is simply the closest thing to it that can sit in a file.
+
+Three commitments follow directly:
+
+- *Append-only traces.* History is never rewritten. A correction is a
+  new trace that supersedes an old one visibly, not an edit that makes
+  the past agree with the present.
+- *Disposable representations.* Any map must be deletable and
+  rebuildable from the traces. If it cannot be regenerated, it has
+  become an authority of its own.
+- *Re-derivation as a habit.* The map is not checked against reality
+  when convenient; re-contact is a discipline with a cadence, because
+  drift compounds in the gaps.
+
+** Principle II — the allocation policy: one node is non-delegable
+
+The second principle governs the division of labor between the human
+and the machine, and it draws the line in an unexpected place: not at
+difficulty, but at *authorship-dependence*.
+
+A simple test finds the line. Imagine the act performed by someone — or
+something — else, with a /provably identical/ result, and ask whether
+you would take that deal.
+
+- *The dishwasher.* Would you let a machine wash your dishes if they
+  came out exactly as clean? Obviously yes. The clean dishes were the
+  only thing you wanted; who produced them is irrelevant. The value is
+  in the output → *delegate*, gladly, even though it is the bulk of the
+  chore.
+- *The marathon.* Would you pay someone to run your marathon for you
+  and pin the medal on /you/ — same finish time, your name in the
+  results? Obviously not. The medal was never the point; running it
+  was. An identical outcome leaves nothing of value behind. The value
+  is in the doing → *keep* it.
+
+Both are tedious, sweaty, hours of effort — so the line between them is
+/not difficulty/. In the dishes, the effort is the *price* you pay for
+the result; in the marathon, the effort *is* the result. The same test
+settles the cases this practice cares about: would you hire a
+ghostwriter for your wedding vows, even if they moved the room to tears
+just as much? No — vows are worthless unless they are yours. That "no"
+is the same "no" as letting a model author your reflection, your
+scientific judgment, or your sign-off.
+
+The distinction is ancient. Aristotle separated /poiesis/ — production,
+whose end is the product — from /praxis/ — action, whose end is in the
+doing itself. The allocation policy in one line: *delegate the poiesis,
+keep the praxis.* A line of code is authorship-independent — any
+competent agent yields an equivalent line — so it is fully delegable,
+even when it is the bulk of the visible, skilled labour. The design
+choice and the sign-off are authorship-dependent, so they stay. The
+machine may write every line; the human decides what to build and signs
+that it was built right.
+
+What stays human, concretely, is one node: *the situated judgment that
+metabolizes surfaced reality into a committed choice, and signs for it.*
+Signing is the act that constitutes you as the one answerable — and
+because you sign, you must inspect what you sign with distrust, deep
+inspection, and a critical spirit, as you would review external work
+that goes out under your name.
+
+** Neither alone: why the practice is the conjunction
+
+Each principle, taken alone, names something that already exists.
+
+- *The loop without the judgment node* is just cybernetics. A
+  thermostat runs Principle I perfectly — re-contact reality, correct
+  the representation — with no witness, no signature, no judgment. Most
+  control systems do. Nothing new there.
+- *The judgment without the loop* is just record-keeping. A signed
+  affidavit is an answerable, authored account with no loop at all.
+  Nothing new there either.
+
+What is distinctive is the conjunction: a self-correcting loop between
+reality and a disposable representation, /in which the one node that is
+not automated is the situated human judgment/ — while everything else
+is offloaded to a machine. And the two principles need each other in
+both directions:
+
+- *Principle II selects the domain where Principle I matters.* The loop
+  applies everywhere; the /practice/ applies exactly where the value of
+  the output depends on someone being answerable for it over time.
+  Where nothing must be answered for, run the thermostat — full
+  automation is correct, and this manifesto does not apply (see Scope
+  limits).
+- *Principle I is what makes Principle II's node trustworthy.* The
+  judgment literature is blunt about this: intuitive expert judgment is
+  reliable only in environments that provide valid cues and fast,
+  honest feedback (Kahneman & Klein, 2009). An unlooped judge drifts
+  exactly like an unlooped map. The loop — re-contact, re-derive,
+  compare — is what /calibrates/ the human comparator. The judge needs
+  the loop as much as the loop needs the judge.
+
+One more asymmetry, worth stating because it dates this document
+honestly: *Principle I is timeless; Principle II is era-dependent.* The
+direction of authority between map and territory does not move as
+machines improve. The /location of the fence/ does — work that was kept
+human in one capability regime becomes delegable in the next (writing
+code already crossed; proposing hypotheses may cross). Principle II is
+therefore not a fixed list of protected tasks but a *policy*: at any
+moment, delegate everything authorship-independent, however hard, and
+keep the choice and the signature. The policy is stable; its extension
+moves with the machines.
+
+* The vocabulary
+
+The practice needs few terms, but it needs them exactly. Eight are
+load-bearing; everything else can be said in ordinary words.
+
+- *World-trace* :: the residue of /reality/: the commit, the signed
+  contract, the test result, the meeting's actual outcome. The
+  authoritative layer. World-traces have veto power over every derived
+  representation, and a /changed/ world-trace is the one thing allowed
+  to interrupt you and pull the framing upstream.
+- *Signal* :: an incoming stimulus that is not yet a trace of anything:
+  an email arrives, an idea is floated, a thought occurs. A signal
+  changes nothing until you form intent and act on it. Treating every
+  signal as authoritative floods the judgment with noise.
+- *Work-trace* :: the residue of /your activity/: the conversation you
+  had, the decision you recorded, the dead end you explored. Provenance
+  and lineage — narrative, not setpoint.
+- *Comparator* :: the human node of the loop: the one who holds the
+  derived view against the traces, judges, chooses, and signs. The word
+  is borrowed from control theory, with one correction noted below.
+- *Setpoint* :: what the loop regulates toward. For the account itself:
+  "the representation faithfully matches the traces." For bounded work:
+  the deadline and the contract — which are themselves world-traces.
+- *Phantom* :: an item in a derived representation whose provenance
+  reaches no world-trace. A requirement nobody actually imposed, a
+  belief with no residue behind it. Phantoms are the characteristic
+  failure of standing maps, and the provenance discipline below exists
+  to make them visible: they are the nodes with no root.
+- *The spine* :: the one append-only narrative log of the practitioner
+  across all work — identity, durable learnings, accumulated judgment.
+  Singular, map-less, and never rewritten.
+- *Derived view* (or /roadmap/) :: any disposable representation
+  re-derived from traces: a project roadmap, a status summary, an
+  index. Plural, local, and deletable by construction.
+
+* The loop
+
+** The shape
+
+#+begin_src
+   action  ─────────────▶  traces  (contact with reality)
+      ▲                       │
+      │                       ▼
+      │       distil into checkpoint documents                   (encode)
+      │                       │
+      │                       ▼
+      │          recall context by situation                     (retrieve)
+      │                       │
+      │                       ▼
+      └─────────  committed, signed choice  ◀──  the comparator  (judge)
+#+end_src
+
+Action leaves traces. Traces are /encoded/: distilled into checkpoint
+documents — not chronological records but crystallisations, engineered
+for a dual audience, serving at once as the human's resumption point
+and as portable context that primes a model to reason over the whole
+picture. Checkpoints are /retrieved/ by situation, not loaded
+wholesale: the project you are in, the threads that are fresh, the
+horizon you are on cue what comes back into view. (This design is
+modeled on the encoding-specificity findings of the memory literature —
+retrieval works best when the cues at recall match the cues at encoding
+— as a guiding analogy, not a claimed implementation.) Retrieval
+informs the /judgment/ — the non-delegable node — which issues new
+action, which leaves new traces.
+
+The machine operates on every arc except the judgment: it distils, it
+recalls, it narrates. It does not judge. And the loop re-contacts
+reality on every pass — which is why the account cannot quietly drift
+into elaborating its own prior plan.
+
+** The systems reading: a balancing loop governing a reinforcing one
+
+In systems-dynamics vocabulary (Meadows), the practice is two coupled
+loops, and the whole design is in the coupling.
+
+The /governing/ loop is *balancing* — textbook negative feedback. Stock:
+the fidelity of the representation to the traces. Setpoint: "the
+account matches reality." Error signal: the gap between map and traces.
+Corrective flow: traces win, the map is pulled back.
+
+The loop /worth running/ is *reinforcing*. Define *reach* as the span
+of reality a single practitioner can faithfully account for — across
+time and across parallel threads. Each honest cycle enlarges the
+account, which improves retrieval, which sharpens judgment, which
+produces more faithful action, which enlarges the account again. Reach
+compounds. That compounding is the point of the practice — it is what
+"extending human reach" means, mechanically.
+
+#+begin_src
+      ┌─────────── R: reach compounds (the point) ────────────┐
+      ▼                                                       │
+   action ─▶ traces ─▶ [re-derive] ─▶ judgment ─▶ commit ─▶ action
+                          ▲   │
+                          │   ▼
+                    B: the comparator
+              (map vs traces → traces win)
+             setpoint = fidelity to reality
+#+end_src
+
+The load-bearing insight is pure systems theory: *a reinforcing loop
+left ungoverned runs away.* Without the balancing loop, reach does not
+compound fidelity — it compounds /drift/: the account keeps growing,
+but grows away from reality, larger and less true. The practice is a
+designed inverse of the classic "limits to growth" trap: instead of
+letting the reinforcing engine slam into an external limit, you install
+the balancing loop internally, on purpose, as a governor. *R is why you
+bother; B is what keeps R honest.*
+
+Two of the practice's habits are, in these terms, interventions at the
+highest-leverage points:
+
+- *Re-derive from traces every session* is /shrinking the perception
+  delay/. Delays in balancing loops cause overshoot and oscillation; a
+  map that is not resampled for weeks accumulates error silently.
+- *Traces win over the map* is the anti-Goodhart rule: regulate against
+  the least-derived account available, never against the
+  representation you are fond of. Balancing loops fail precisely when
+  they control against the believed state instead of the actual one.
+
+** A phantom, caught: the loop working once
+
+One real incident shows the whole mechanism. A bounded delivery
+against an agreed brief carried a deliverable — a separate dossier of
+source documents — that had entered as a /self-imposed idea/ in a
+working session and been encoded into the roadmap /as if the brief
+required it/. It survived there for weeks, untethered. The fix was
+exactly the loop: a session-opening re-contact with the actual
+world-trace (the brief, agreed in writing with its recipient before
+the work began) revealed the map had grown a requirement reality
+never imposed. The item was struck through — not deleted — with the date and
+the reason, so the correction is itself a trace.
+
+Every element of the practice appears in that story: the phantom (an
+item whose provenance reached no world-trace), the perception delay
+(weeks without resampling), the corrective habit (verify the real state
+at session opening), and the append-only repair (strikethrough, never
+erasure). Drift is not hypothetical; it is the standing failure mode of
+every prescriptive document, and the only defence is the habit of
+re-deriving from traces.
+
+** What the law of requisite variety does and does not prove
+
+It is tempting to ground the human node in Ashby's law of requisite
+variety — a regulator can control a system only if it commands at least
+as much variety as the disturbances it must absorb — and conclude that
+the comparator /must/ be human, as if by theorem. The law proves no
+such thing. It is completely neutral about what kind of system the
+regulator is; if a machine attains requisite variety for a domain,
+Ashby /licenses/ automating that domain's comparator.
+
+What the law actually supplies is the *criterion the fence answers to*:
+the comparator must command variety matching the reality it judges —
+including everything tacit, situated, and contextual that never made it
+into the traces. The claim that, for answerable work, only the situated
+human currently meets that criterion is an /empirical, dated/ claim —
+supported today by what we know of tacit knowledge (Polanyi) and expert
+judgment (Dreyfus), and honestly subject to revision. This is exactly
+why Principle II is a policy rather than a theorem, why the fence is
+held as a norm rather than a mechanism, and why its location moves
+between capability regimes while the architecture of Principle I does
+not.
+
+* The division of labor
+
+** The two machine seats
+
+The machine sits in two distinct seats, on either side of the human
+node.
+
+- *The interlocutor* operates on the /forming/ of the decision:
+  divergent first (widen the view), then convergent (narrow it), then
+  adversarial (attack the assumptions). Properly understood it is a
+  *stimulator*: the diverging and converging happen in the human's
+  head; the model is the provocation that widens the aperture and the
+  foil that surfaces hidden assumptions — a stimulus to cognition,
+  never its replacement.
+- *The chronicler* operates on the /recording/ of the work: making
+  dense traces — code, choices, dead ends — legible; translating
+  technical work into a followable story; re-rendering the derived
+  views. The model is the chronicler, not the author.
+
+The human's non-delegable acts sit precisely /between/ the two seats:
+the model helps you form intent and helps you record what happened; it
+is fenced out of the instant where you actually choose and the instant
+where you actually witness.
+
+The seats also give the practice a temporal shape. At /inception/, the
+interlocutor earns its keep: one or more sessions that diverge across
+the problem space and converge on a crystallised problem statement and
+a roadmap. In /execution/, the chronicler and the loop take over:
+recording, recalling, re-projecting, with the roadmap kept honest by
+re-derivation. The choice brackets the front; the sign-off brackets the
+end.
+
+** The registered prior
+
+The interlocutor seat carries a danger the early versions of this
+practice underestimated: *the menu is the decision.* Decades of
+judgment research (anchoring; choice architecture) show that whoever
+generates the option set substantially steers the choice, even when the
+chooser formally decides. A model that frames your options has done
+much of your deciding, invisibly, while leaving the signature to you.
+The fence around the final pick does not protect the agenda.
+
+The countermeasure is a discipline: *write your own position down
+before invoking the model.* State what you currently believe, what you
+expect, what you would do absent advice — then open the dialogue. The
+stimulator then widens an existing aperture instead of framing an empty
+one, and you can see afterwards exactly where it moved you. Ask for the
+case /against/ your registered position before asking for options. A
+prior you never wrote down is a prior the model writes for you.
+
+** Delegate by authorship, not difficulty
+
+Everything authorship-independent is handed to the machine eagerly —
+and "everything" is meant literally, including the bulk of the visible,
+skilled labour. Surfacing, orienting, indexing, formatting,
+summarizing-for-orientation, scaffolding, drafting, and in software the
+writing of nearly every line of code: all of it is poiesis, valued by
+its output, delegable in full. +Partial delegation of the delegable
+layer is not caution; it is a babysitting tax that frees no one.+
+/(Struck 2026-08-30: true of delegation aimed at the output; not of
+delegable work retained to calibrate the judge — see fragility five.)/
+
+What is kept is praxis: the choice of what to build, the judgment
+against reality, the reflection, the signature. Kept not because the
+machine cannot produce convincing versions of them — it increasingly
+can — but because a convincing version produced by a non-witness is
+worth nothing. The account derives its value from who answers for it.
+
+** The oracle, refused a seat
+
+The model invites a third use, distinct from both seats: the *oracle*.
+The two seats ask it to work on what you already command — you can
+judge the output, so delegation is safe by construction. The oracle
+use asks it what you do /not/ know, and there the danger is routinely
+misdiagnosed. It is not that asking is wrong, nor even that the model
+may be wrong. It is that an oracle's answer is a derived
+representation whose provenance reaches no world-trace — and the
+moment you act on it unchecked, it becomes authoritative: a phantom at
+birth. Oracle use is the map-first inversion re-entering through the
+window — a non-answerable representation outranking reality — inside
+the very practice built to prevent it.
+
+The operative question is therefore never "is the model reliable
+here?" — that question has no honest answer at the moment you need
+one. The question is: /does this answer have a path to reality before
+I sign on it?/ Two zones follow:
+
+- *Convertible.* You cannot judge the answer directly, but you can
+  make it touch reality before signing: run the code, check that the
+  cited source exists and says what is claimed, do the experiment. The
+  loop closes through traces, and the answer enters the system the
+  only way anything may — as a trace of contact, not as an utterance
+  taken on authority.
+- *Unclosable.* No affordable contact with reality stands between the
+  answer and the action. The loop cannot close, and the model's
+  representation quietly takes the setpoint's place.
+
+The rule in one line: *a model's answer is a signal, never a trace.*
+It may provoke intent like any other signal; it earns authority only
+through contact with reality. Where no such contact is affordable, the
+honest moves are to record the ground as what it is — "acting on the
+model's unverified claim, because X" — or not to act at all.
+
+* The artifact spectrum
+
+The practice does not prescribe one artifact. It prescribes a *dial*,
+set by two axes of the work.
+
+** Axis one: bounded ↔ open-ended
+
+How delivery-bounded is the work?
+
+- *Bounded delivery* — a defined end-state, a deadline, phases,
+  something to sign. Here the right artifact is the *live emergent
+  document* (below): a roadmap that is descriptive and prescriptive at
+  once, re-derived from the traces, driving toward an end.
+- *Open-ended accumulation* — no end-state, no deliverable; identity
+  and judgment forming across years. Here a standing prescriptive map
+  is exactly the liability to refuse: the right artifact is the pure
+  append-only *spine*, with views derived only at review time and then
+  discarded.
+- *Between* — work that is open-ended overall but bounded per chapter
+  (a research program: questions arise indefinitely, but each
+  hypothesis has a falsifiable end) maintains a map scoped to the
+  bounded unit and nothing wider.
+
+The artifact's /prescriptiveness/ slides along this axis; the loop and
+the judgment node are invariant across the whole range. A methodology
+is not better or worse in the abstract — it shines on the problem it
+was shaped to and dims when lifted out of it. Choose the artifact by
+the shape of the work, not by allegiance to a method.
+
+** Axis two: well-modeled ↔ novel
+
+There is an honest counter-tradition this practice must answer rather
+than ignore: in some regimes, /plan-primacy wins/. Aviation checklists,
+building codes, surgical protocols — standing prescriptive maps that
+systematically outperform situated judgment in their domains, with
+strong evidence behind them. Reality-first is not a universal law.
+
+The resolution is a second axis: *how well-modeled is the domain?*
+Where the domain model is mature, failure modes are enumerated, and
+novelty is low, the map has earned authority — follow the checklist,
+and let deviation from it be the thing that requires judgment and a
+signature. Where the domain model is poor, the work is novel, or the
+territory is still being charted, the map cannot have earned that
+authority, and reality-first is the only honest stance. Most knowledge
+work — research, design, writing, early engineering — lives at the
+novel end. But the practice should say plainly: the explorer redraws
+the chart /because the coast is unknown/. Once a coast is charted to
+death, you follow the chart, and that too is fidelity to reality.
+
+** The live emergent document
+
+For bounded work, the central artifact is a single living roadmap with
+three properties:
+
+- *Descriptive and prescriptive at once.* It mirrors the current state
+  of the project, re-rendered from the traces each time it is touched —
+  and precisely /because/ it is current, it can legitimately say what
+  to do next. It is prescriptive only for as long as it stays honestly
+  descriptive; the moment it decrees rather than reflects, drift has
+  crept in.
+- *Emergent.* It is not authored top-down as a plan; it condenses out
+  of the accumulating traces and shifts as they shift.
+- *Disposable.* It is a regenerable view: delete it and rebuild it from
+  the traces. That deletability is the architectural guarantee that it
+  never becomes the thing you are loyal to.
+
+Under delivery pressure the clean separation of "log upstream, map
+downstream" collapses into a single file carrying three strata at once,
+and this is correct, not a compromise:
+
+- an *append-only decision ledger* — each shipped item bound to its
+  evidence (a commit hash, a date, a rationale), each scope decision
+  frozen with its date;
+- *corrections that preserve their own history* — a superseded plan is
+  struck through with the date and the reason, never deleted, so the
+  revision is itself testimony;
+- a *live forward projection* — the phase breakdown, the verified
+  current state, the "remains to be done."
+
+** Roadmaps are plural and local; the spine is singular and map-less
+
+The granularity rule: *one balancing loop → one roadmap.* The unit is
+not "project" or "team" but /the unit with a single setpoint and a
+single signer/. Most projects are one deadline-shaped setpoint and get
+one roadmap. A sub-part earns its own roadmap only when it is itself a
+bounded sub-delivery with its own falsifiable end and its own owner; a
+mere phase of the same delivery is a section, not a new map. Where the
+horizon splits is where a new roadmap buds.
+
+The placement rule: *roadmaps live next to the traces they are derived
+from* — in the project's own repository or workspace — never
+centralised in an orchestrator. Re-derivation must be local and cheap;
+"traces win" must be a low-latency check; and no central store of maps
+should ever compete with the spine for authority. The spine — the one
+open-ended log of the practitioner across all work — holds only what no
+single workspace can hold: identity, durable learnings distilled up
+from closed projects, and a /derived/ index of what is fresh, active,
+and dormant. The spine *references, never duplicates*: it finds the
+roadmaps; it does not keep them. When a project closes, its roadmap is
+disposable — distil the durable learnings up into the spine and let the
+map dissolve. The reach stays; the scaffolding goes.
+
+** Evidence: one durable home for every trace
+
+Every world-trace a decision rests on needs /one authoritative,
+re-contactable home/, so the derived views can be checked against it.
+Three tiers, by the durability of the referent:
+
+1. *Durable and addressable → reference it.* A commit, a file, the
+   signed contract, a stable ticket. Point at it; a copy would start
+   drifting from the original.
+2. *Ephemeral or external → capture it.* Email threads, screenshots,
+   saved PDFs, pasted excerpts — into a per-project =traces/= (or
+   =evidence/=) folder, each item carrying when it was captured and
+   which decision it grounds. Here the copy /is/ the faithful move: it
+   does not drift from a living referent, it prevents the referent from
+   vanishing.
+3. *No footprint at all → externalise at the intent statement.* A
+   hallway conversation, a verbal commitment, a realisation: write it
+   down as you commit — "doing X because Y told me Z, <date>." That
+   line becomes the world-trace.
+
+This is deliberate, scoped capture by the comparator of the specific
+evidence a decision rests on — the opposite of ambient ingestion.
+Pulled deliberately and scoped to a decision: yes. Pushed automatically
+as an inbox: refused. And the capture discipline has a scope rule:
+capture what is /decision-relevant/, not everything — the cure for
+forgetting is better cue-matching, not more storage.
+
+One case deserves naming rather than faking: some grounds are *tacit*.
+You know more than you can tell, and some judgments rest on experience
+that has no externalisable footprint. The honest move is to record the
+tacit ground /as such/ — "doing X on my judgment, from experience with
+similar cases" — rather than fabricating a documentary basis. That
+node is un-auditable by design, because it /is/ the witnessing act.
+Recording it honestly is better provenance than pretending.
+
+** Provenance: the audit graph
+
+Every artifact — a roadmap line, a todo, an idea, a decision — carries
+two links: a *down-link* to its origin (which world-trace or signal it
+came from) and an *up-link* to what it became (the intent or action it
+fed). The graph this closes is the drift-detector: an item whose
+down-link never reaches a world-trace is a phantom, flagged for
+pruning; a backlog item whose originating signal has gone stale is a
+candidate for review-time retirement.
+
+And one asymmetry, which is Principle I in miniature: *world-traces may
+trigger re-entry; the backlog may not.* A failing test, a drifted
+metric, a re-read contract clause — a changed world-trace is allowed to
+interrupt and pull you upstream, because it is the setpoint. Todos and
+ideas merely /surface/ when you orient, and wait to be chosen. A
+backlog that fires on its own is a map decreeing action — the exact
+inversion the practice exists to prevent. Intent is *formed at the
+confluence* of verified reality, surfaced signals, and consulted
+candidates; it is never /derived from/ any artifact. The moment a todo
+"generates" the next action, the comparator's job has been quietly
+handed to the map.
+
+* The daily practice
+
+A session is a cognitive block, not a day. Inside it you walk the loop
+once; the two human bookends are the non-delegable node.
+
+1. *Orient — re-contact reality first.* Before trusting any document,
+   resample the world: the log, the files, the test counts, what the
+   contract actually says. Diff that against the roadmap; where they
+   disagree, the traces win. This is the balancing correction firing at
+   session start — minimizing the perception delay, the single
+   highest-value habit in the practice.
+2. *Surface — by situation, not everything.* Pull into view only what
+   this moment cues: this project, fresh threads, the relevant horizon.
+3. *Form intent — the comparator, with the stimulator.* Write your
+   registered prior. Then let the model widen, narrow, and attack it.
+   Then /you/ commit to a choice, sign it, and record its provenance —
+   which world-traces it regulates against, which signals and
+   candidates it consulted, which grounds are tacit.
+4. *Act — the only writer.* Do the work; hand the machine every
+   authorship-independent piece. Action leaves traces. Nothing enters
+   the system's state except through action.
+5. *Chronicle — the machine distils.* It compresses the session's dense
+   traces into legible narrative and re-renders the derived views. You
+   sign the chronicle.
+6. *Reflect — the comparator again.* Intent versus outcome, plus
+   residue: what did this session leave behind that matters beyond it?
+   Append to the spine; promote durable learnings out of the disposable
+   map.
+
+Rhythm: *orient → surface → intent → act → chronicle → reflect.* The
+friction in the middle belongs to the machine; the two ends — choosing
+and witnessing — are yours.
+
+Two refinements:
+
+- *The =contradict= move.* A standing use of the model whose only job
+  is to surface /what contradicts the current framing/ — never to
+  maintain or polish it. This is the deliberate countermeasure to the
+  model's own fluency (fragility three, below): an agent pointed at the
+  cracks, because the default direction of a helpful model is to paper
+  them over. The verdict on a surfaced contradiction stays with the
+  comparator — it is structurally safer to delegate /finding/ a
+  contradiction than to delegate /judging it resolved/.
+- *Cadenced re-contact is legitimate for bounded work.* The purist "the
+  human triggers everything" is right for the open-ended spine. But a
+  deadline is itself a world-trace, and a scheduled re-orient is not
+  ambient ingestion — it is shrinking the perception delay. The cadence
+  resamples reality; the comparator still forms every intent. What
+  stays forbidden is any automation that /decides/ for you.
+
+* The five fragilities
+
+The practice is load-bearing but brittle in five places. Naming them is
+part of the practice; each has a countermeasure, and none has a
+guarantee.
+
+1. *The fence is a norm, not a mechanism.* Nothing technically stops
+   you from rubber-stamping a machine-drafted reflection or accepting
+   "the data suggests X" as your judgment. The moment you do, the
+   artifact silently stops being yours while looking identical. There
+   is no runtime check — only discipline, and the adversarial
+   inspection that signing demands. As models grow more persuasive, the
+   gradient across the fence steepens. The failure is invisible and
+   self-inflicted.
+2. *Some fences are thin.* Where the machine is plausibly capable of
+   the protected act — proposing the hypothesis, ranking the options —
+   the line between "orienting you" and "making the call" narrows. The
+   discipline is to have the model /narrate options without ranking
+   them/ where the choice is the protected act, and to notice when
+   orientation has quietly become recommendation.
+3. *Fluency papers over the cracks.* The practice depends on reality
+   being allowed to overturn the framing — and a model that is too good
+   at making the existing plan feel coherent will smooth exactly the
+   contradictions that should send you back upstream. The model's
+   fluency is itself a risk to the practice's empiricism. Countermeasure:
+   the =contradict= move, run as a habit, plus the session-opening
+   re-derivation from traces — not cleverer maintenance.
+4. *The menu is the decision.* Whoever generates the option set steers
+   the choice, even when the human formally decides. The fence protects
+   the final pick but not the agenda — and agenda-setting is where much
+   of the steering power lives. Countermeasure: the registered prior,
+   written before the model speaks, and the standing request for the
+   case /against/ it.
+5. *The comparator drifts, and nothing in the loop catches it.* The
+   loop as described recalibrates only the map: re-derive, diff,
+   correct. No arc recalibrates the judge — yet the judge's variety
+   comes from having done the work (Polanyi again: tacit knowledge is
+   acquired in the doing, not in the watching), and total delegation
+   of the doing silently switches off the feedback loop by which
+   judgment is maintained. This is fragility one with a structural
+   cause — eroded competence — in place of a moral one, and it is
+   undetectable by construction: rubber-stamped output looks identical
+   to inspected output, and the correction rate is ambiguous at both
+   ends. A falling rate is ambiguous between "the machine improved"
+   and "I stopped seeing." A high rate on a task recorded as delegated
+   is ambiguous between "the machine is failing" and "I am doing the
+   work through it and crediting it" — the Clever Hans effect, as
+   Kambhampati (2024) observes of human-in-the-loop prompting: the
+   horse that appeared to count while reading its handler, and the
+   handler steering "even if they didn't set out to do so
+   deliberately." The effect is defined by being unnoticed, so a
+   tracked rate catches only its visible half; a back-prompt, a
+   reworded ask, an "are you sure about step three?" is a correction
+   round and is chronicled as one. The first ambiguity misattributes
+   the machine's work to the judge; the second misattributes the
+   judge's work to the machine, and it corrupts the evidence Principle
+   II moves on — the fence is moved outward on the experience that the
+   machine now does the work. The test is not when the judge
+   contributed but what the contribution carried: the line runs
+   between a prompt that specifies the problem and a prompt that
+   injects its solution, whenever either is issued. What has crossed
+   is only what the machine added beyond what the prompts carried; a
+   spec so complete that the machine only formats it delegates the
+   formatting and nothing more. An act has crossed only when the
+   machine's output passes a sound check the judge did not author the
+   answer to, and the chronicle records what the prompts carried, not
+   the word "delegated." (Kambhampati's closing point, that the
+   arrangement becomes questionable when the human cannot verify the
+   answer, is the unclosable zone of the oracle rule.) The better
+   the delegation, the less informative the experience of supervising
+   it (Bainbridge's irony of automation). The serious counterargument
+   — the critic does not paint, the editor does not write novels —
+   cuts the other way on inspection: those evaluators were formed by
+   decades of feedback loops aimed at evaluation itself, with
+   consequences for being wrong. Judgment is a stock maintained only
+   by its own loop. Countermeasure: a /second balancing loop, pointed
+   at the judge/ — deliberate re-contact with the delegated layer
+   (periodically do by hand what you normally delegate, not for the
+   output but to resample your own competence: the inward analogue of
+   the session-opening re-derivation); seeded errors, the blind
+   proficiency test (deliberately defective output placed among the
+   genuine, to measure whether detection still fires); and a tracked
+   correction rate whose decline is treated as a signal to
+   disambiguate, never as a success, and whose height is treated as a
+   signal that the task has not crossed, never as delegation. The
+   practice began by naming two
+   things that decay — the map and the account. There is a third: the
+   comparator. Each needs its own corrective loop.
+
+* Scope limits
+
+The practice is strong but not universal. It holds where work
+/accumulates/ against a reality and someone must /answer/ for it over
+time. It weakens or inverts elsewhere, and pretending otherwise would
+be the kind of map this practice refuses.
+
+- *Throughput work with no accumulating reality.* Tasks valued purely
+  by volume and speed — bulk translation, routine triage, content at
+  scale — have no account to author and no framing for reality to
+  overturn. Here substitution /is/ the goal, and this apparatus is dead
+  weight.
+- *Disposable generation.* A throwaway prototype, a first-draft
+  brainstorm, a scaffold meant to be deleted: nothing will ever be
+  signed, so there is no authorship to protect. Let the machine author
+  it outright; insisting on the fence would be ceremony.
+- *Speed-over-trust domains.* Where fast and approximately right beats
+  slow and accountable, the cost structure that makes the practice
+  worthwhile inverts.
+- *Well-modeled, checklist-governed regimes.* Where the domain model
+  has earned authority (axis two, above), follow the map and reserve
+  judgment for deviations. Plan-primacy is not the enemy; /unearned/
+  plan-primacy is.
+- *Multi-signer work.* The practice as stated is a solo discipline:
+  one loop, one setpoint, one signer. Nothing here is proven for two
+  comparators sharing traces — whose signature binds, how registered
+  priors compose, what a fence held by a committee is worth. The
+  institutional record is not encouraging: where inspection of machine
+  output has been mandated at scale, it has mostly produced the ritual
+  rather than the inspection (Green, 2022). Scaling the fence is an
+  open problem, stated here as a limit rather than smuggled in as a
+  feature; the transfer test comes first.
+
+The boundary in one line: /the practice applies exactly where the value
+of the output depends on someone being answerable for it over time,/
+/in territory not yet charted well enough for the chart to rule./
+
+* Falsifiability
+
+A manifesto that demands fidelity to reality owes reality the terms of
+its own surrender. The practice is refuted if any of the following
+holds at scale and over time:
+
+- *Delegated judgment does not degrade the work.* A practice in which
+  the machine authors the reflection, the scientific decision, or the
+  sign-off — and the resulting body of work proves as trustworthy,
+  deep, and durable as the witnessed version — falsifies the
+  non-delegability claim. The honest test is over time: substitution
+  often looks free until the account must be returned to, defended, or
+  built upon.
+- *Opacity beats legibility.* If opaque, database-backed systems
+  reliably outperform plain-text trace architectures on both longevity
+  and human-machine reasoning quality, the substrate commitment is
+  wrong.
+- *Hand-groomed maps win at scale.* If maintained prescriptive maps
+  systematically outperform regenerated views once regeneration is
+  cheap, the disposability commitment is mistaken rather than
+  principled.
+- *Inspection is ritual.* If practitioners who sign whatever the model
+  emits show no loss in outcome quality, then "responsibility draws the
+  line" describes a ceremony, not a mechanism.
+
+To keep these testable rather than rhetorical, the practice proposes
+its own measures:
+
+- *Resumption time*: how long to regain full working context on a
+  project untouched for three months — the loop claims this shrinks
+  dramatically.
+- *Phantom count*: requirements discovered to trace to no world-trace,
+  per project, with and without the provenance discipline.
+- *Signed versus rubber-stamped*: defect and reversal rates of
+  decisions that went through the registered-prior-plus-inspection path
+  versus decisions that did not.
+- *Seeded-error detection*: the rate at which deliberately defective
+  machine output, placed blind among the genuine, is caught at
+  inspection — the one unambiguous measure of whether signing is
+  inspection or ceremony.
+- *Correction rate over time*: how often the comparator corrects the
+  machine's output, tracked in the knowledge that a decline is
+  ambiguous between model improvement and comparator drift — to be
+  disambiguated (seeded errors are the disambiguator), never read as
+  a success by itself; and that a high rate on a task recorded as
+  delegated is ambiguous between machine failure and Clever Hans —
+  the judge doing the work through the machine — to be disambiguated
+  by the sound check (does the output pass without the judge
+  correcting it, and without the asking having carried the answer?),
+  never read as delegation.
+- *The transfer test*: whether the practice survives adoption by a
+  second practitioner without its originator's coaching.
+
+And one limitation stated plainly, because the practice demands it: the
+evidence base to date is a handful of projects by a single
+practitioner. Convergence across one person's projects is excellent
+/hypothesis generation/ and weak /confirmation/ — a stable personal
+style would produce the same convergence. The manifesto is offered as a
+falsifiable proposal, not a proven result. The transfer test is the
+next experiment.
+
+Since the first draft, external evidence has begun to arrive, and
+honesty requires logging it on both sides. On the cost of delegated
+cognition: a survey of 319 knowledge workers finds that the more a
+worker trusts the model, the less critical-thinking effort they
+report investing (Lee et al., CHI 2025); an EEG study of LLM-assisted
+essay writing finds accumulating "cognitive debt," with assisted
+writers unable to quote from their own essays and reporting impaired
+ownership of them (Kosmyna et al., 2025) — the marathon medal,
+measured. On the fence as ritual: the empirical record on mandated
+human oversight of algorithms finds that people largely cannot
+perform it, and that policy requiring it mostly produces the ceremony
+(Green, 2022). None of this settles the falsifiers; all of it bears
+on them, and in the direction the practice predicts — while also
+documenting how often real practitioners fail to hold the fence.
+
+* Lineage
+
+The practice is a synthesis, not an invention; naming the ancestry
+situates it and clarifies the one new thing. The inclusion test for
+this list is strict: a source earns its place by /doing work/ —
+generating a distinction, constraining a decision, or naming a failure
+mode — not by resonating. (That test is the practice applied to its own
+bibliography: an undiscriminated everything-connects reading list is
+itself an ungoverned reinforcing loop.)
+
+** The engine: representations answerable to reality
+
+- *Alfred Korzybski* (/Science and Sanity/, 1933) — "the map is not the
+  territory"; abstraction loses information at every level. The literal
+  statement of Principle I, applied here recursively: the trace is not
+  the territory either, only the least-derived map of it.
+- *Karl Popper* (/Conjectures and Refutations/, 1963) — the loop as
+  epistemology: knowledge grows by exposing representations to refuting
+  contact with reality, never by protecting them. The session-opening
+  re-derivation is conjecture-and-refutation as a habit; the phantom
+  deliverable is a Lakatosian degenerating programme caught in the act.
+  (David Deutsch's "good explanations are hard to vary" is the modern
+  restatement.)
+- *W. Ross Ashby* (/Design for a Brain/, 1952) — the law of requisite
+  variety, used here /correctly/: it supplies the criterion the
+  comparator must meet, not a theorem that the comparator must be
+  human.
+- *Gregory Bateson* (/Steps to an Ecology of Mind/, 1972) —
+  "information is a difference that makes a difference" is what the
+  comparator detects; circular causation and the map/territory relation
+  are the loop's backbone.
+- *Donella Meadows* (/Thinking in Systems/, 2008) — the working
+  vocabulary: stocks, flows, setpoints, delays, leverage points; the
+  insight that the practice's rules sit at the highest-leverage points
+  (the goal, the paradigm, the information flows).
+- *John Boyd* — the OODA loop (observe–orient–decide–act): the daily
+  rhythm of this practice is a close cousin, independently derived in
+  the military register, with "orient" as the pivotal and most
+  misunderstood step. A practice-tradition confirmation that
+  re-contacting reality faster than your representation decays is the
+  whole game.
+- *W. Edwards Deming and the Toyota tradition* — plan-do-check-act,
+  /genchi genbutsu/ ("go and see for yourself at the actual place"),
+  the gemba walk. The industrial orthopraxy of re-contacting reality,
+  with decades of at-scale evidence — the strongest external validation
+  that the loop works outside one practitioner's projects.
+- *Event sourcing* (software architecture) — the engineering tradition
+  that /is/ this substrate: an append-only event log as the source of
+  truth, all state as disposable projections rebuilt from the log. It
+  brings mature, hard-won failure-mode knowledge (snapshot drift,
+  replay cost) and makes the whole architecture legible to an engineer
+  in one sentence.
+- *Architecture Decision Records* (Nygard, 2011) — the engineering
+  orthopraxy of the decision ledger: lightweight records binding each
+  decision to its context, alternatives, and consequences, superseded
+  rather than edited. A closer ancestor of the roadmap's ledger
+  stratum than event sourcing itself.
+- *Jay Kreps* ("The Log," 2013) and *Yohei Nakajima* ("The Log is the
+  Agent," 2026) — the log generalised, then applied to the machines
+  themselves: an ordered, append-only log as the backbone from which
+  every other representation is derived; and the agent-engineering
+  world independently converging on that substrate for language-model
+  agents — log as source of truth, state as disposable projection,
+  end-to-end lineage — with no equivalent of Principle II +anywhere in
+  sight+. /(Narrowed 2026-10-03: human nodes are now in sight in that
+  world, but none is this one —/
+  /the verifier of Gilda & Gilda (2026) is external to the generation
+  loop and explicitly need not stay human;/
+  /the industrial human-in-the-loop of 2026 allocates the human by the
+  stakes of the action;/
+  /and the non-delegability argued in the philosophy of technology
+  (Torrecilla-Pinero, 2026)/ /is ontological and scoped to
+  dignity-touching domains./ /None allocates by authorship with a
+  fence that moves.)/ The clearest external proof that the two
+  principles are separable, and that the second is this practice's
+  actual claim.
+- *James C. Scott* (/Seeing Like a State/, 1998) — the cautionary
+  corpus: imposed top-down legibility schemes that flatten reality and
+  break against it. What happens at civilizational scale when the map
+  is allowed to outrank the territory.
+- *Carlo Ginzburg* ("Clues," 1979) — the evidential paradigm:
+  reconstructing reality from traces, clues, and symptoms, as the
+  hunter, the physician, and the historian do. The trans-disciplinary
+  pedigree of "traces are the source of truth."
+- *George Box* ("Science and Statistics," 1976) — "all models are
+  wrong, some are useful": the pragmatist license for the disposable
+  map, in one page.
+- *C. S. Peirce* — abduction: inference to the best explanation from
+  the traces. The logical form of what the comparator does; structural,
+  not decorative.
+
+** The judgment node: why one act stays human
+
+- *Aristotle* (/Nicomachean Ethics/) — /praxis/ versus /poiesis/:
+  action whose end is in the doing versus production whose end is the
+  product. The allocation policy, twenty-three centuries early:
+  delegate the poiesis, keep the praxis.
+- *Michael Polanyi* (/Personal Knowledge/, 1958; /The Tacit Dimension/,
+  1966) — "we know more than we can tell": why the judgment draws on
+  situated knowledge that cannot be fully externalised into any trace.
+- *Hubert Dreyfus* (/Mind Over Machine/) — expert judgment as
+  intuitive, embodied, and non-representational; the novice-to-expert
+  ladder as an account of what the comparator's skill /is/ and how it
+  forms.
+- *Donald Schön* (/The Reflective Practitioner/, 1983) —
+  reflection-in-action: the working theory of the practice's reflective
+  beat and the inspect-before-signing discipline.
+- *John Dewey* (/Logic: The Theory of Inquiry/) — knowing-as-doing;
+  inquiry as the active reconstruction of a problematic situation; the
+  demolition of the spectator theory of knowledge. The practice's
+  native philosophical tradition.
+- *James J. Gibson* (/The Ecological Approach to Visual Perception/) —
+  direct perception and affordances: the empirical case that agents
+  pick up reality rather than consulting inner maps of it.
+- *Christopher Alexander* (/The Timeless Way of Building/) — organic,
+  piecemeal, reality-corrected growth against the imposed master plan:
+  the live emergent document, in the register of making.
+- *Nassim Taleb* (/Skin in the Game/; /Antifragile/) — the binding of
+  decision to consequence as the formal core of signing; and a third
+  systems behaviour beyond balancing and reinforcing — gaining from
+  stressors — as the adversarial temperament the practice needs.
+- *The Stoic discipline of assent* (Marcus Aurelius, Epictetus) —
+  assent only to the evident: the oldest statement of the sign-off as a
+  practiced discipline rather than a held belief. Kept from a longer
+  contemplative shortlist because it alone names a move the practice
+  actually makes; the rest of that tradition enriches the felt sense of
+  the work but grounds no distinction, and is honestly classed as
+  resonance, not lineage.
+- *Jesús Torrecilla-Pinero* ("Judgment Cannot Be Delegated: A
+  Subject-Preserving Framework for AI Governance," 2026) — the
+  non-delegability claim stated as an ontological limit: moral
+  judgment is constitutively personal, so delegating it does not
+  transfer it but dissolves the subject who judges; and the
+  observation that a human who rubber-stamps model output satisfies
+  the tracing condition of Meaningful Human Control while exercising
+  nothing that deserves the name of judgment — fragility one, from
+  the governance side. Kept for the contrast it sharpens: he draws
+  the line by ontology, for dignity-touching domains; this practice
+  draws it by authorship, for answerable work, and holds it as a
+  policy whose location moves. Same fence, two different reasons for
+  it.
+
+** The augmentation tradition: extending the witness
+
+- *Vannevar Bush* ("As We May Think," 1945) — the Memex: external
+  associative memory as an extension of recall.
+- *J. C. R. Licklider* ("Man-Computer Symbiosis," 1960) and *Douglas
+  Engelbart* ("Augmenting Human Intellect," 1962) — the canonical
+  statements of extend-don't-substitute; this manifesto is their thesis
+  re-derived for the language-model era.
+- *Edwin Hutchins* (/Cognition in the Wild/, 1995) and *Clark &
+  Chalmers* ("The Extended Mind," 1998) — cognition lives in artifacts:
+  the checkpoint document is not a record of thinking but a part of it.
+- *Endel Tulving* (encoding specificity, 1973) and *Godden & Baddeley*
+  (context-dependent recall, 1975) — the memory science that the
+  retrieval design is /modeled on/: recall works best when retrieval
+  cues match encoding cues. An inspiration honestly labeled as analogy,
+  not implementation.
+
+** The loyal opposition: kept because they push back
+
+- *Judea Pearl* (/The Book of Why/, 2018) — the sharpest scope-limit:
+  the loop self-corrects against /observable/ reality, but causal
+  structure is not always observable. Where drift is causal-structural,
+  re-contacting traces will not reveal it.
+- *Hayden White* (/Metahistory/, 1973) — the prosecutor of the fidelity
+  claim: every narrative emplots its facts; the "faithful, neutral
+  account" is always already a structured argument. Read against the
+  chronicle, not for it.
+- *Kahneman & Klein* ("Conditions for Intuitive Expertise," 2009) — the
+  constraint on the human node: tacit judgment is trustworthy only in
+  environments with valid cues and fast feedback. Both a warning and,
+  read closely, the strongest argument /for/ the loop: it is what
+  creates the conditions under which the comparator's intuition can be
+  trusted at all.
+- *Atul Gawande* (/The Checklist Manifesto/, 2009) — the evidence that
+  in well-modeled regimes, standing prescriptive maps beat situated
+  judgment. The counter-tradition that forces axis two into the
+  practice instead of leaving it as an unexamined blind spot.
+- *Lisanne Bainbridge* ("Ironies of Automation," 1983) — the classic
+  statement that automation makes the human's remaining role harder,
+  not easier: the operator removed from routine work loses exactly the
+  situational awareness the exceptional cases demand, and the better
+  the automation, the less informative the experience of supervising
+  it. The structural cause behind fragility five, four decades before
+  language models.
+- *Ethan Mollick* (/Co-Intelligence/, 2024) — the rival allocation
+  policy: delegate by measured capability, mapping the "jagged
+  frontier" empirically and handing off whatever falls inside it. Kept
+  because it names the live alternative this practice refuses:
+  capability-allocation moves the fence wherever the machine improves,
+  with no principled stopping point; authorship-allocation predicts
+  exactly that drift and names what must not cross regardless of
+  capability.
+- *Subbarao Kambhampati* ("Can Large Language Models Reason and
+  Plan?", 2024; "LLMs Can't Plan, But Can Help Planning in LLM-Modulo
+  Frameworks", with others, 2024) — the generate-test-critique loop
+  with the human deliberately kept out of the inner iteration: placed
+  at specification and model acquisition, with a sound external
+  verifier certifying the result. Supplies the Clever Hans reading of
+  the correction rate and the test for whether an act has crossed:
+  who certified the answer, and what the prompts carried. Opposition
+  because it draws the human out of the inner loop where fragility
+  five draws them back in to stay calibrated; the two are reconciled
+  by nesting, his loop inside the delegable layer, this one around it.
+- *Sankalp Gilda and Shlok Gilda* ("AI-Assisted Engineering Should
+  Track the Epistemic Status and Temporal Validity of Architectural
+  Decisions," 2026) — the oracle rule formalised from the engineering
+  side: every machine-proposed decision carries an epistemic level
+  (conjecture, substantiated, corroborated) and an evidence expiry,
+  and their "Transformer Mandate" requires that whoever finalises a
+  decision be external to the generation loop. Opposition because the
+  mandate is explicitly about separation, not about the human:
+  "currently, this necessitates a human; in future multi-agent
+  systems, the role could theoretically be filled by an independent
+  verifier agent." What moves in both is the fence; what differs is
+  the anchor. Their human stands at ratification until a machine can
+  verify soundly, and then steps aside: allocation by capability, in
+  Kambhampati's shape. This practice moves the line between poiesis
+  and praxis as machines improve, but pins the choice and the
+  signature to answerability and to the value of the doing, which no
+  capability unlocks. Their evidence decay is a clock standing in for
+  re-contact: a decision expires after a set time and is re-validated.
+  Here a decision never expires by the calendar; it is overturned the
+  moment a changed world-trace reaches it, because it is a derived
+  representation like any map and the traces win. The clock is the
+  right device where re-contact is too costly to run on every pass;
+  where it is cheap, re-derivation subsumes it.
+- *Human-in-the-loop by stakes* (the 2026 agent-platform pattern:
+  "agent proposes, a person disposes," approval gated on the risk or
+  irreversibility of the action, every intervention logged) — the
+  third allocation policy, beside authorship and capability: the
+  human is placed where the consequences are large, not where the
+  act is theirs. Kept because it is the one that ships, and because
+  it is the arrangement Green (2022) found produces the ritual: a
+  checkpoint chosen by stakes invites a signature chosen by habit.
+
+What is genuinely new here is none of the elements — it is their
+convergence onto one substrate at one moment: legible digital traces
+that are simultaneously the practitioner's durable thinking, the
+machine's working context, and the work's authoritative state, made
+practicable by machines finally able to read, distil, and narrate
+traces at negligible cost.
+
+* Genus and name
+
+** A practice, not a methodology
+
+The right genus for this thing is *practice*, and the precise term is
+*orthopraxy*. The orthodoxy/orthopraxy distinction is about where
+authority lives: orthodoxy locates correctness in right belief — a
+doctrine you assent to; orthopraxy locates it in right practice —
+conduct done rightly, with doctrine downstream or absent.
+
+Run the practice through that lens. There is no authoritative doctrine
+to conform to — the map is explicitly disposable, refused as a source
+of truth; that is the anti-creed move. Authority lives in the doing and
+its residue: in traces (what was actually done) and in the repeated
+discipline (re-contact, re-derive, judge, sign). What makes an account
+genuine rather than counterfeit is not assent to a proposition but
+whether the witnessing act was actually performed. And the isomorphism
+is exact:
+
+#+begin_quote
+orthodoxy : orthopraxy :: plan-first : reality-first
+#+end_quote
+
+Orthodoxy lets doctrine generate conduct; plan-first work lets the plan
+generate action. The practice refuses both inversions in the same
+gesture.
+
+One refinement keeps the term honest: this is not a behaviorist
+orthopraxy of outward conduct. The act it protects is an /interior,
+situated judgment/ — so the precise name for the genus is an
+*orthopraxy of judgment*: authority lives in practice rather than in
+any doctrine, but the practice that carries the authority is an act of
+discernment with an irreducible inside.
+
+** The name
+
+*The reality-first practice.* The name foregrounds the timeless half —
+the direction of authority between reality and its representations —
+and lets the era-dependent half (where exactly the automation fence
+sits this decade) remain what it is: a policy, revised as machines
+change, inside a frame that does not.
+
+Digital traces are the practice's substrate; automation is its
+accelerant; neither is its principle. The principle is the explorer's:
+the chart is always redrawn from the coastline.
+
+* The extraction
+
+One passage to carry into any new project:
+
+#+begin_quote
+Build the work around plain-text, append-only traces that are
+simultaneously your durable thinking, the machine's working context,
+and the project's authoritative state. Treat every representation built
+on them as disposable: re-derived from the traces on every contact, and
+overruled by the traces wherever they disagree. Hand the machine every
+act whose value is independent of who performed it — surfacing,
+orienting, distilling, narrating, scaffolding, and the bulk of the
+visible labour — because that friction is what otherwise kills the
+practice. Keep exactly one node: the situated judgment that turns
+surfaced reality into a committed choice, registered before the machine
+speaks and signed after adversarial inspection. Hold the fence as a
+norm and a policy, not a theorem: its location moves as machines
+improve; the direction of authority — reality over representation —
+does not. Set the artifact's prescriptiveness by the shape of the work:
+a live, fused, re-derived roadmap for bounded delivery; a pure
+append-only spine for open-ended accumulation; an earned checklist
+where the domain is charted to death. And measure the practice by what
+it claims: faster resumption, fewer phantoms, an account that can be
+defended years later by the one who signed it.
+#+end_quote
+
+* Provenance of this manifesto
+
+This manifesto distils a longer comparative essay that analyzed the
+convergent design of the originating projects, together with a critical
+review of that essay. The review's corrections are applied here rather
+than appended: the two candidate first principles are presented as a
+conjunction instead of ranked (the essay's two halves had crowned each
+in turn); the requisite-variety argument is stated as a criterion
+rather than a theorem; the memory-science framing is labeled as the
+analogy it is; the convergence evidence is claimed at honest strength
+and its single-practitioner limit stated; the anchoring fragility and
+the plan-primacy counter-tradition are added; and the lineage was
+re-tiered under an explicit inclusion test, with the additions that
+test demanded (Aristotle, Popper, Boyd, Deming, event sourcing,
+Kahneman & Klein, Gawande) and the prunings it forced.
+
+The document was first signed on 2026-06-07. A revision of 2026-08-30 integrated two further sources. A working
+conversation on oracle use and on the calibration of the judge
+supplied the oracle rule, the fifth fragility, and the second
+balancing loop pointed at the comparator. A survey of adjacent work
+supplied the Bainbridge entry, the rival capability-allocation policy
+(Mollick), the ADR and log-as-agent lineage, the first external
+evidence now logged under Falsifiability (Lee et al. 2025, Kosmyna et
+al. 2025, Green 2022), and the multi-signer scope limit. One sentence
+— the babysitting-tax claim — was corrected by dated strikethrough
+rather than rewritten, per the practice's own rule.
+
+A revision of 2026-09-27 added the Clever Hans reading to fragility
+five and to the correction-rate measure, and a lineage entry, from
+Subbarao Kambhampati's 2024 essay "Can Large Language Models Reason
+and Plan?" (Annals of the New York Academy of Sciences), which
+carries the argument the LLM-Modulo paper of the same year states in
+one clause: the manifesto had read the correction rate only at its low
+end, and so named the machine's work passing as the judge's but never
+the judge's work passing as the machine's. A second reading of the
+source, before signing, moved the crossing test from the timing of
+the judge's contribution to its content.
+
+A revision of 2026-10-03 narrowed one lineage claim by dated
+strikethrough — that the log-as-substrate world had no equivalent of
+Principle II "anywhere in sight" — after a search found human nodes
+in that world, none allocated by authorship, and added the three
+sources that showed it: Torrecilla-Pinero (2026) under the judgment
+node, Gilda & Gilda (2026) and the human-in-the-loop-by-stakes
+pattern under the loyal opposition. The claim itself stood; its
+reach did not.
+
+Per the practice itself, this document is a derived view, not a source
+of truth. It is downstream of, and disposable relative to, the lived
+discipline it describes. If the manifesto and the practice ever
+disagree, the practice wins and the manifesto is re-derived — never the
+reverse. A practice that could not survive its own manifesto being
+deleted was never a practice; it was a doctrine wearing a document.
+
+This manifesto, the praxis skill that implements it and the praxis CLI
+are maintained together at https://github.com/dda410/praxis — the place
+for corrections, for discussion of where the practice applies and where
+it does not, and for the dated strikethroughs any revision leaves.
+
+This text is licensed under the Creative Commons Attribution 4.0
+International licence (CC BY 4.0); the full licence is in the LICENSE
+file beside it. Share it, adapt it, build on it, with credit, marking
+what you changed, and without implying the author endorses the result.

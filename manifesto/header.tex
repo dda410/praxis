@@ -1,0 +1,17 @@
+% Fallback glyphs for arrows used in body text (Latin Modern Roman lacks them).
+\usepackage{newunicodechar}
+\newfontfamily{\fallbackfont}{DejaVu Serif}
+\newunicodechar{↔}{{\fallbackfont ↔}}
+\newunicodechar{→}{{\fallbackfont →}}
+\newunicodechar{←}{{\fallbackfont ←}}
+
+% Title alone on the first page; the table of contents on its own page(s);
+% the body starts on a fresh page after it.
+\usepackage{etoolbox}
+\usepackage[titles]{tocloft}
+\setlength{\cftbeforesecskip}{0.45em}
+\preto\tableofcontents{\clearpage}
+\appto\tableofcontents{\clearpage}
+
+% The repository link under the title block on the first page.
+\appto\maketitle{\begin{center}\url{https://github.com/dda410/praxis}\end{center}}

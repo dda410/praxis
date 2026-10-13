@@ -1,0 +1,14 @@
+#!/usr/bin/env python3
+"""praxis — launcher. Puts this repo's src/ on sys.path so the stdlib-only
+praxis package runs from any project with system Python."""
+import os
+import sys
+
+HERE = os.path.dirname(os.path.realpath(__file__))
+SRC = os.path.join(os.path.dirname(HERE), "src")
+sys.path.insert(0, SRC)
+
+from praxis.cli import main  # noqa: E402
+
+if __name__ == "__main__":
+    sys.exit(main())
